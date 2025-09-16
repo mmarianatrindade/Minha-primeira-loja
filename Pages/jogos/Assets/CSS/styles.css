@@ -1,0 +1,145 @@
+/* ===================== */
+/* RESET E GERAL */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  background-image: url("../Imagens/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+nav a {
+  color: #bbb;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ff4c29;
+  text-shadow: 0 0 10px #ff4c29;
+}
+
+/* ===================== */
+/* HERO */
+/* ===================== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 8rem 2rem 4rem; /* espaço para não colar no header */
+  min-height: 100vh;
+}
+
+/* ===================== */
+/* GAME CARDS */
+/* ===================== */
+.game-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.game-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.game-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0f0; /* verde para preço */
+  margin-bottom: 1rem;
+}
+
+.buy-btn {
+  display: inline-block;
+  background: #ff4c29;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #ff7849;
+  box-shadow: 0 0 15px #ff7849;
+}
+
+/* Hover nos cards */
+.game-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+/* ===================== */
+/* RESPONSIVIDADE */
+/* ===================== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 1rem;
+  }
+
+  .game-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
